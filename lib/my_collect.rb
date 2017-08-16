@@ -2,8 +2,7 @@ def my_collect(collection)
   i = 0
   new_collection = []
   while i < collection.size
-    item = yield collection[i]
-    new_collection.push(item)
+    new_collection << yield(collection[i])
     i = i + 1
   end
   new_collection
